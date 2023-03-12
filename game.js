@@ -1,13 +1,14 @@
 const playerChoices = document.querySelectorAll('[data-attribute]');
 const result = document.querySelector('#game_Result');
-const displayPlayerOption = document.querySelector('#playerOption');
-const displayComputerOption = document.querySelector('#computerOption');
-const playerScore = document.querySelector('#playerScore');
-const computerScore = document.querySelector('#computerScore');
+const displayPlayerOption = document.querySelector('#player-option');
+const displayComputerOption = document.querySelector('#computer-option');
+const playerScore = document.querySelector('#player-score');
+const computerScore = document.querySelector('#computer-score');
+const buttonResetGame = document.querySelector('#btn-reset');
 
 const gameOptions = ['pedra', 'papel', 'tesoura'];
-let pcScore = 0;
-let PLscore = 0;
+let pcScorePoints = 0;
+let playerScorePoints = 0;
 
 //get player selection and send to playGame function
 playerChoices.forEach((playerChoice) => {
@@ -37,8 +38,21 @@ function playGame(player) {
     (player === 'tesoura' && randomComputerChoice === 'pedra') ||
     (player === 'papel' && randomComputerChoice === 'tesoura')
   ) {
-    result.textContent = 'Computador Venceu!';
+    result.textContent = 'Computador Ganhou a Rodada';
+    pcScorePoints += 1;
+    computerScore.textContent = pcScorePoints;
   } else {
-    result.textContent = 'Você Venceu!';
+    result.textContent = 'Você ganhou essa Rodada';
+    playerScorePoints += 1;
+    playerScore.textContent = playerScorePoints;
+  }
+  checkWinner(playerScorePoints, pcScorePoints);
+}
+
+function checkWinner(player, computer) {
+  if (player === 5) {
+    result.textContent = 'Você ganhou o Jogo';
+  } else if (computer === 5) {
+    result.textContent = 'Computador ganhou o Jogo';
   }
 }
