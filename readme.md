@@ -9,4 +9,5 @@ O placar é exibido na tela, mostrando o número de pontos do jogador e do compu
 O jogo apresenta imagens para cada uma das opções de jogo, além de efeitos visuais para a seleção do jogador e a exibição do resultado. O botão "Jogar de Novo" permite que o jogo seja reiniciado após o término da partida.
 
 
-![rockpaperscissors](https://user-images.githubusercontent.com/96093244/225102742-8786c472-c29f-41b9-a320-f26fcd08e4b0.png)
+
+![rockpaperscissors](https://user-images.githubusercontent.com/96093244/225123553-f9de1eb8-516b-4ed8-9d9d-85cca102ecac.png)
