@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(226, 219, 219, 0.8);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -58,14 +58,15 @@ main {
 .placar__container h2 {
   font-size: 2rem;
   text-transform: uppercase;
-  color: lightgreen;
+  color: rgb(75, 51, 51);
   letter-spacing: 0.1rem;
 }
 
 .placar p {
   margin-top: 0.75rem;
   text-transform: uppercase;
-  color: lightgreen;
+  color: rgb(192, 206, 192);
+  font-weight: bold;
 }
 
 .btnReset {
