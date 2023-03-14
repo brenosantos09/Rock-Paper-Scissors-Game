@@ -13,21 +13,25 @@
 <body>
     <main>
         <div class="container">
-            <div class="paper"> <img src="images/paper.svg" data-attribute="papel" alt="Imagem da opção papel"> </div>
-            <div class="rock"> <img src="images/rock.svg" data-attribute="pedra" alt="Imagem da opção pedra"> </div>
-            <div class="scissor"> <img src="images/scissor.svg" data-attribute="tesoura" alt="Imagem da opção tesoura">
-            </div>
+            <div class="paper"> <button type="button" class="btn__element" id="btn-selection"
+                    data-attribute="papel"><img src="images/paper.svg" alt="Imagem da opção papel"></button></div>
+            <div class="rock"> <button type="button" class="btn__element" id="btn-selection" data-attribute="pedra"><img
+                        src="images/rock.svg" alt="Imagem da opção pedra"></button></div>
+            <div class="scissor"> <button type="button" class="btn__element" id="btn-selection"
+                    data-attribute="tesoura"><img src="images/scissor.svg" alt="Imagem da opção tesoura">
+                </button></div>
         </div>
         <div class="placar">
             <div class="placar__container">
                 <h2>Placar</h2>
-                <p>Player: <span id="playerScore">0</span></p>
-                <p>Computador: <span id="computerScore">0</span></p>
+                <p>Player: <span id="player-score">0</span></p>
+                <p>Computador: <span id="computer-score">0</span></p>
             </div>
             <div class="result">
-                <p>Você escolheu: <span id="playerOption"></span></p>
-                <p>Computador escolheu: <span id="computerOption"></span></p>
-                <p id="game_Result">Resultado</p>
+                <p>Você escolheu: <span id="player-option">--</span></p>
+                <p>Computador escolheu: <span id="computer-option">--</span></p>
+                <p id="game_Result">--</p>
+                <button type="button" class="btnReset" id="btn-reset">Jogar de Novo</button>
             </div>
         </div>
     </main>
