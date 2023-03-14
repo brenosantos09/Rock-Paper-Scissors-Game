@@ -1,3 +1,5 @@
+'use strict';
+
 const playerChoices = document.querySelectorAll('[data-attribute]');
 const result = document.querySelector('#game_Result');
 const displayPlayerOption = document.querySelector('#player-option');
@@ -51,8 +53,21 @@ function playGame(player) {
 
 function checkWinner(player, computer) {
   if (player === 5) {
-    result.textContent = 'Você ganhou o Jogo';
+    result.textContent = 'Você ganhou o Jogo.';
+    buttonResetGame.classList.add('active');
+    resetGame();
   } else if (computer === 5) {
     result.textContent = 'Computador ganhou o Jogo';
+    buttonResetGame.classList.add('active');
+    resetGame();
   }
+}
+
+function resetGame() {
+  buttonResetGame.addEventListener('click', () => {
+    location.reload();
+  });
+  playerChoices.forEach((buttons) => {
+    buttons.disabled = true;
+  });
 }
